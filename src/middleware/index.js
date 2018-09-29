@@ -17,10 +17,6 @@ import bindResponseMethods from './bind-response-methods.js'
 export default new Router()
 .use([
   // GLOBAL MIDDLEWARE
-  cors({
-    origin: process.env.CORS_ORIGINS.split(' '),
-    credentials: true,
-  }),
   morgan('dev'),
   cookieParser(),
   requestReporter,

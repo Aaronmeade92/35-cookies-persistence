@@ -33,7 +33,7 @@ export const start = () => {
 export const stop = () => {
   return new Promise((resolve, reject) => {
     if(!state.isOn)
-      return reject(new Error('USAGE ERROR: the state is off'))
+      return reject(new Error('USAGE ERROR: the state is off'));
     return db.stop()
     .then(() => {
       state.http.close(() => {
